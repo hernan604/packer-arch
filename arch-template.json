@@ -33,7 +33,7 @@
             "hard_drive_interface": "sata",
             "ssh_username": "root",
             "ssh_password": "vagrant",
-            "shutdown_command": "echo 'vagrant' | sudo shutdown -H now"
+            "shutdown_command": "echo 'vagrant' | sudo -S -E shutdown -P now"
         },
         {
             "type": "vmware-iso",

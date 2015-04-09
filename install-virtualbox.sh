@@ -31,6 +31,7 @@ echo "==> mounting ${ROOT_PARTITION} to ${TARGET_DIR}"
 /usr/bin/mount -o noatime,errors=remount-ro ${ROOT_PARTITION} ${TARGET_DIR}
 
 echo '==> bootstrapping the base installation'
+/usr/bin/sed -i 's/^/Server = http:\/\/pet.inf.ufsc.br\/mirrors\/archlinux\/$repo\/os\/$arch\n/' "/etc/pacman.d/mirrorlist"
 /usr/bin/pacstrap ${TARGET_DIR} base base-devel
 /usr/bin/arch-chroot ${TARGET_DIR} pacman -S --noconfirm gptfdisk openssh syslinux
 /usr/bin/arch-chroot ${TARGET_DIR} syslinux-install_update -i -a -m

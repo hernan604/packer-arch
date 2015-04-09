@@ -11,7 +11,7 @@ perlbrew install-cpanm
 cpanm Mojolicious
 cpanm Selenium::Remote::Driver JSON::XS File::Slurp MIME::Base64 Digest::SHA1
 cpanm Config::Any Moo Mojo::Pg SQL::Abstract DDP POE::Component::Server::IRC
-cpanm Mojo::Redis2 Mojolicious DateTime
+cpanm Mojo::Redis2 Mojolicious DateTime Redis
 mkdir ~/perl
 cd ~/perl
 git clone https://github.com/hernan604/Web-IRC.git ~/perl/
